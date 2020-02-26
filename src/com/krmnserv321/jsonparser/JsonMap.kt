@@ -36,7 +36,7 @@ class JsonMap : LinkedHashMap<String, Any?>() {
         while (true) {
             val next = iterator.next()
             result.append(SPACE.repeat(count))
-                .append("${next.key}: ${toString(next.value, count)}")
+                .append("\"${next.key}\": ${toString(next.value, count)}")
             if (iterator.hasNext()) {
                 result.append(",")
                     .append(separator)
