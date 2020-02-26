@@ -54,6 +54,7 @@ internal class JsonList : ArrayList<Any?>() {
             return when (any) {
                 is JsonMap -> any.toString(++c)
                 is JsonList -> any.toString(++c)
+                is String -> "\"${any}\""
                 else -> any.toString()
             }
         }
